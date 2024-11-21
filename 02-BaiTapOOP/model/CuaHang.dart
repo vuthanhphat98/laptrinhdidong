@@ -2,11 +2,11 @@ import 'DienThoai.dart';
 import 'HoaDon.dart';
 
 class CuaHang {
-  List<DienThoai> _danhSachDienThoai = [];
-  List<HoaDon> _danhSachHoaDon = [];
+  List<DienThoai> danhSachDienThoai = [];
+  List<HoaDon> danhSachHoaDon = [];
 
   void themDienThoai(DienThoai dienThoai) {
-    _danhSachDienThoai.add(dienThoai);
+    danhSachDienThoai.add(dienThoai);
   }
 
   void themHoaDon(HoaDon hoaDon) {
@@ -21,7 +21,7 @@ class CuaHang {
     }
 
     // Thêm hóa đơn vào danh sách
-    _danhSachHoaDon.add(hoaDon);
+    danhSachHoaDon.add(hoaDon);
 
     // Cập nhật số lượng tồn kho của điện thoại
     if (hoaDon.dienThoai.soLuongTonKho >= hoaDon.soLuongMua) {
@@ -33,7 +33,7 @@ class CuaHang {
 
   double tinhDoanhThu() {
     double doanhThu = 0;
-    for (var hoaDon in _danhSachHoaDon) {
+    for (var hoaDon in danhSachHoaDon) {
       doanhThu += hoaDon.tinhTongTien();
     }
     return doanhThu;
@@ -41,21 +41,21 @@ class CuaHang {
 
   double tinhLoiNhuan() {
     double loiNhuan = 0;
-    for (var hoaDon in _danhSachHoaDon) {
+    for (var hoaDon in danhSachHoaDon) {
       loiNhuan += hoaDon.tinhLoiNhuanThucTe();
     }
     return loiNhuan;
   }
 
   void hienThiDanhSachDienThoai() {
-    for (var dienThoai in _danhSachDienThoai) {
+    for (var dienThoai in danhSachDienThoai) {
       dienThoai.hienThiThongTin();
       print('-------------------');
     }
   }
 
   void hienThiDanhSachHoaDon() {
-    for (var hoaDon in _danhSachHoaDon) {
+    for (var hoaDon in danhSachHoaDon) {
       hoaDon.hienThiThongTinHoaDon();
       print('-------------------');
     }
