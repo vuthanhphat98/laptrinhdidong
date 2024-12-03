@@ -29,15 +29,6 @@ class DienThoai {
     }
   }
 
-
-  String get tenDienThoai => _tenDienThoai;
-  set tenDienThoai(String value) {
-    if (value.isEmpty) {
-      throw Exception('Tên điện thoại không được rỗng');
-    }
-    _tenDienThoai = value;
-  }
-
   String get hangSanXuat => _hangSanXuat;
   set hangSanXuat(String value) {
     if (value.isEmpty) {
