@@ -24,6 +24,14 @@ class DienThoai {
 
   String get tenDienThoai => _tenDienThoai;
   set tenDienThoai(String value) {
+    if (value.isEmpty || value.length > 50) {
+      throw Exception('Tên điện thoại không hợp lệ');
+    }
+  }
+
+
+  String get tenDienThoai => _tenDienThoai;
+  set tenDienThoai(String value) {
     if (value.isEmpty) {
       throw Exception('Tên điện thoại không được rỗng');
     }
