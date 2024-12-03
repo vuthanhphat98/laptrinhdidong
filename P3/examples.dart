@@ -1,90 +1,90 @@
 import 'package:flutter/material.dart';
 
 //Button
-class CardExamples extends StatelessWidget{
+class CardExamples extends StatelessWidget {
   @override
-  Widget build (BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Card Example'),
-        ),
-        body: Center(
-          child: Card(
-            elevation: 4.0,
-            color: Colors.green,
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Text('This is a card'),
-            ),
+        home: Scaffold(
+      appBar: AppBar(
+        title: Text('Card Example'),
+      ),
+      body: Center(
+        child: Card(
+          elevation: 4.0,
+          color: Colors.green,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text('This is a card'),
           ),
         ),
-      )
-    );
+      ),
+    ));
   }
 }
 
 //Avatar
-class CircleAvatarExamples extends StatelessWidget{
+class CircleAvatarExamples extends StatelessWidget {
   const CircleAvatarExamples({super.key});
   @override
-  Widget build (BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-          appBar: AppBar(
-            title: Text('CircleAvatarExamples'),
-          ),
-          body: Center(
-            child: CircleAvatar(
-              radius: 50,
-              // backgroundImage: NetworkImage('https://picsum.photos/200/200'),
-                backgroundImage: AssetImage ('../assets/hutech_logo.png'),
-            ),
-          ),
-        )
-    );
+      appBar: AppBar(
+        title: Text('CircleAvatarExamples'),
+      ),
+      body: Center(
+        child: CircleAvatar(
+          radius: 50,
+          // backgroundImage: NetworkImage('https://picsum.photos/200/200'),
+          backgroundImage: AssetImage('../assets/hutech_logo.png'),
+        ),
+      ),
+    ));
   }
 }
 
 //Viền vuông border
-class BorderExamples extends StatelessWidget{
+class BorderExamples extends StatelessWidget {
   const BorderExamples({super.key});
   @override
-  Widget build (BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-          appBar: AppBar(
-            title: Text('BorderExamples'),
-          ),
-          body: Center(
-            child: Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.blueGrey,
-                  width: 3,
-              ),
-            ),
-            child: const Center(
-              child: Text('Border Example'),
-            ),
+      appBar: AppBar(
+        title: Text('BorderExamples'),
+      ),
+      body: Center(
+        child: Container(
+          width: 100,
+          height: 100,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.blueGrey,
+              width: 3,
             ),
           ),
-        )
-    );
+          child: const Center(
+            child: Text('Border Example'),
+          ),
+        ),
+      ),
+    ));
   }
 }
 
-//thanh Bar dưới
+//thanh Bar phia dưới
 class BottomNavigationBarExample extends StatefulWidget {
   const BottomNavigationBarExample({super.key});
 
   @override
-  State<BottomNavigationBarExample> createState() => _BottomNavigationBarExampleState();
+  State<BottomNavigationBarExample> createState() =>
+      _BottomNavigationBarExampleState();
 }
+
 //
-class _BottomNavigationBarExampleState extends State<BottomNavigationBarExample> {
+class _BottomNavigationBarExampleState
+    extends State<BottomNavigationBarExample> {
   int _selectedIndex = 0;
   // Hàm xử lý khi tap vào item
   void _onItemTapped(int index) {
@@ -92,6 +92,7 @@ class _BottomNavigationBarExampleState extends State<BottomNavigationBarExample>
       _selectedIndex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -150,4 +151,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
